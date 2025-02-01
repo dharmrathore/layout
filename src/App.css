@@ -1,38 +1,40 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+  font-size: .875rem;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+canvas{
+    display: none;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+ul, ol, *{
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
-
-.App-link {
-  color: #61dafb;
+.layout{
+    grid-template-areas:"sidebar header header header" 
+                        "sidebar main main main" 
+                        "sidebar main main main"
+                        "sidebar footer footer footer";
+    grid-template-columns: 80px auto;
+    grid-template-rows: 60px auto auto 60px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+main {
+    grid-area: main;
+    height: calc(100vh - 120px);
+    scroll-behavior: smooth;
+    overscroll-behavior-y: contain;
+    scrollbar-width: thin;
+    scrollbar-color: inherit;
+}
+header{
+    grid-area: header;
+}
+aside {
+    grid-area: sidebar;
+}
+footer {
+    grid-area: footer;
 }
