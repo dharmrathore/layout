@@ -8,7 +8,7 @@ const Sidebar = () => {
 			<ul className='navbar-nav justify-content-center align-items-center w-100 gap-2'>
 				<li className='nav-item w-100 text-center'><Link className='nav-link w-100' to="/">Home</Link></li>
 				<li className='nav-item w-100 text-center'><Link className='nav-link w-100' to="/about">About</Link></li>
-				<li className='nav-item w-100 text-center'><Link className='nav-link w-100' to="/contact">Contact</Link></li>
+				<li className='nav-item w-100 text-center'><Link className='nav-link w-100' to="/blog">Blog</Link></li>
 			</ul>
 		</nav>
     </aside>
